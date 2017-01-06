@@ -34,21 +34,21 @@ class App extends Component {
           <div className="col-md-4">
             <div className="well">
               <form className="form-horizontal">
-                <h4>{ 'New Record' }</h4>
+                <h4>New Record</h4>
                 <div className="form-group">
-                  <label for="date" className="col-sm-2 control-label">Date: </label>
+                  <label className="col-sm-2 control-label">Date: </label>
                   <div className="col-sm-10">
                     <input type='text' name='date' className="form-control" />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label for="reason" className="col-sm-2 control-label">Reason: </label>
+                  <label className="col-sm-2 control-label">Reason: </label>
                   <div className="col-sm-10">
                     <input type='text' name='reason' className="form-control" />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label for="amount" className="col-sm-2 control-label">Amount: </label>
+                  <label className="col-sm-2 control-label">Amount: </label>
                   <div className="col-sm-10">
                     <input type='integer' name='amount' className="form-control" />
                   </div>
@@ -62,7 +62,9 @@ class App extends Component {
               </form>
             </div>
           </div>
-          <div className="col-md-4">
+        </div>
+        <div className='row'>
+          <div className="col-md-offset-2 col-md-8">
             <div className="well">
               <table className="table table-striped table-hover table-bordered">
                 <thead>
