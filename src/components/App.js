@@ -16,8 +16,17 @@ class App extends Component {
     }
 
     this.deleteTransaction = this.deleteTransaction.bind(this);
+    this.createTransaction = this.createTransaction.bind(this);
     this.debitsAmount = this.debitsAmount.bind(this);
     this.creditsAmount = this.creditsAmount.bind(this);
+  }
+
+  createTransaction(transaction) {
+    let length = this.state.transactions.length;
+    let transactions = this.state.transactions;
+    transaction.id = length + 1;
+    transactions.push(transaction);
+    this.setState({transactions: transactions});
   }
 
   deleteTransaction(id){
@@ -69,7 +78,7 @@ class App extends Component {
           </div>
           <div className="col-md-5">
             <div className="well">
-              <TransactionForm />
+              <TransactionForm createTransaction={ this.createTransaction }/>
             </div>
           </div>
         </div>
