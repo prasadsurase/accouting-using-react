@@ -21,9 +21,9 @@ class TransactionsTable extends Component{
         <tbody>
           {
             this.props.transactions.map(function(transaction, index){
-              return <TransactionRow key={transaction.id} index={index + 1} date={transaction.date} reason={transaction.reason}
-                amount={transaction.amount} type={transaction.type} />
-            })
+              return <TransactionRow key={transaction.id} id={transaction.id} index={index + 1} date={transaction.date} reason={transaction.reason}
+                amount={transaction.amount} type={transaction.type} handleTransactionDelete={this.props.handleTransactionDelete} />
+            }.bind(this))
           }
         </tbody>
       </table>
