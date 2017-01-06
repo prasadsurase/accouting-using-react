@@ -8,9 +8,10 @@ class TransactionRow extends Component {
   render() {
     return(
       <tr>
-        <td>date</td>
-        <td>reason</td>
-        <td>amount</td>
+        <td>{ this.props.date }</td>
+        <td>{ this.props.reason }</td>
+        <td>{ this.props.amount }</td>
+        <td>{ this.props.type }</td>
         <td>
           <button className="btn btn-primary" >Edit</button>
           <button className="btn btn-danger" >Delete</button>

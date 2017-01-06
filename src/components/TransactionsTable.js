@@ -14,15 +14,25 @@ class TransactionsTable extends Component{
             <th> Date </th>
             <th> Reason </th>
             <th> Amount </th>
+            <th> Type </th>
             <th> Actions </th>
           </tr>
         </thead>
         <tbody>
-          <TransactionRow />
+          {
+            this.props.transactions.map(function(transaction, index){
+              return <TransactionRow key={transaction.id} index={index + 1} date={transaction.date} reason={transaction.reason}
+                amount={transaction.amount} type={transaction.type} />
+            })
+          }
         </tbody>
       </table>
     );
   }
 }
+
+TransactionsTable.defaultProps = {
+  transactions: []
+};
 
 export default TransactionsTable;
